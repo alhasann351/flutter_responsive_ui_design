@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_responsive_ui_design/responsive_layout.dart';
+
+import 'screen/desktop_screen.dart';
+import 'screen/mobile_screen.dart';
+import 'screen/tablet_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,21 +31,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: const Text(
-          'Responsive UI Design',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 25,
-            color: Colors.white,
-          ),
-        ),
-      ),
-      body: const Center(
-        child: Text('Flutter Responsive UI Design'),
-      ),
+    return ResponsiveLayout(
+      mobile: MobileScreen(),
+      tablet: TabletScreen(),
+      desktop: DesktopScreen(),
     );
   }
 }
