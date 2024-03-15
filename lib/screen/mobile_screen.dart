@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MobileScreen extends StatelessWidget {
@@ -17,9 +18,37 @@ class MobileScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.blue,
       ),
-      backgroundColor: Colors.blue[400],
-      body: Center(
-        child: Text(mobileWidth.toString()),
+      //backgroundColor: Colors.blue[400],
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: AspectRatio(
+              aspectRatio: 16 / 9,
+              child: Container(
+                color: Colors.blue[200],
+                //height: 200,
+              ),
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: AspectRatio(
+                    aspectRatio: 16 / 4,
+                    child: Container(
+                      color: Colors.blue[200],
+                      height: 60,
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
