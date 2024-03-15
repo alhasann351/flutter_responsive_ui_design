@@ -32,9 +32,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
-      mobile: MobileScreen(),
-      tablet: TabletScreen(),
-      desktop: DesktopScreen(),
+      mobile: const MobileScreen(),
+      tablet: const TabletScreen(),
+      desktop: const DesktopScreen(),
     );
   }
 }

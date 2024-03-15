@@ -5,6 +5,15 @@ class DesktopScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    var desktopWidth = MediaQuery.of(context).size.width;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Desktop Screen', style: TextStyle(color: Colors.white,),),
+        backgroundColor: Colors.red,
+      ),
+      backgroundColor: Colors.red[400],
+      body: Center(child: Text(desktopWidth.toString())),
+    );
   }
 }
