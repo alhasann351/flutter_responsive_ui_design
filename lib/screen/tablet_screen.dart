@@ -20,9 +20,23 @@ class TabletScreen extends StatelessWidget {
         backgroundColor: Colors.green,
       ),
       //backgroundColor: Colors.green[400],
+      drawer: const Drawer(
+        child: Column(
+          children: [
+            DrawerHeader(
+              child: Icon(Icons.record_voice_over_outlined),
+            ),
+            Text('Flutter'),
+            Text('Dart'),
+            Text('Java'),
+            Text('Kotlin'),
+          ],
+        ),
+      ),
       body: Row(
         children: [
           Expanded(
+            flex: 3,
             child: Column(
               children: [
                 Padding(
@@ -54,6 +68,7 @@ class TabletScreen extends StatelessWidget {
             ),
           ),
           Expanded(
+            flex: 1,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(

@@ -19,6 +19,19 @@ class MobileScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       //backgroundColor: Colors.blue[400],
+      drawer: const Drawer(
+        child: Column(
+          children: [
+            DrawerHeader(
+              child: Icon(Icons.record_voice_over_outlined),
+            ),
+            Text('Flutter'),
+            Text('Dart'),
+            Text('Java'),
+            Text('Kotlin'),
+          ],
+        ),
+      ),
       body: Column(
         children: [
           Padding(
